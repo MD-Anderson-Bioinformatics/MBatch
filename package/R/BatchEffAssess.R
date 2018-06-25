@@ -11,7 +11,7 @@ library(rJava, warn.conflicts=FALSE, verbose=FALSE)
 
 getMBatchVersion<-function()
 {
-	return("MBatch Version: 2017-09-19-1530")
+	return("MBatch Version: 2018-06-22-1444")
 }
 
 mbatchWriteSuccessfulLog <- function()
@@ -1022,10 +1022,10 @@ getTestInputDir <- function()
   baseDir <- Sys.getenv("MBATCH_TEST_INPUT")
   if(!file.exists(baseDir))
   {
-    baseDir <- "/mnt/hgfs/rsrch1_bea/BEA/TESTING/MATRIX_DATA"
+    baseDir <- "/bea_testing/MATRIX_DATA"
     if(!file.exists(baseDir))
     {
-      baseDir <- "/rsrch1/bcb/batcheffects/BEA/TESTING/MATRIX_DATA"
+      baseDir <- "/bea_testing/MATRIX_DATA"
       if(!file.exists(baseDir))
       {
         if(!file.exists(baseDir))
@@ -1043,10 +1043,10 @@ getTestOutputDir <- function()
   baseDir <- Sys.getenv("MBATCH_TEST_OUTPUT")
   if(!file.exists(baseDir))
   {
-    baseDir <- "/mnt/hgfs/rsrch1_bea/BEA/TESTING/output"
+    baseDir <- "/bea_testing/output"
     if(!file.exists(baseDir))
     {
-      baseDir <- "/rsrch1/bcb/batcheffects/BEA/TESTING/output"
+      baseDir <- "/bea_testing/output"
       if(!file.exists(baseDir))
       {
         if(!file.exists(baseDir))
@@ -1064,10 +1064,10 @@ getTestCompareDir <- function()
   baseDir <- Sys.getenv("MBATCH_TEST_COMPARE")
   if(!file.exists(baseDir))
   {
-    baseDir <- "/mnt/hgfs/rsrch1_bea/BEA/TESTING/COMPARE"
+    baseDir <- "/bea_testing/COMPARE"
     if(!file.exists(baseDir))
     {
-      baseDir <- "/rsrch1/bcb/batcheffects/BEA/TESTING/COMPARE"
+      baseDir <- "/bea_testing/COMPARE"
       if(!file.exists(baseDir))
       {
         if(!file.exists(baseDir))

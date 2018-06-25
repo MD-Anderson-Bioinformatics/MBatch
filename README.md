@@ -1,4 +1,4 @@
-# MBatch
+# MBatch R Package
 
 This is for educational and research purposes only. 
 
@@ -8,4 +8,31 @@ The MBatch R package is designed to help assess and correct for batch effects. I
 
 Additional information can be found at http://bioinformatics.mdanderson.org/main/TCGABatchEffects:Overview
 
-MBatch on GitHub is designed to be installed using the devtools library. Complete instructions for installing MBatch and its prerequisites on Linux (Debian 9.1) are in the MBatch_01_InstallLinux.pdf file.
+The documentation directort contains several kinds of documentation for MBatch:
+
+ * Files that start MBatch_01 are install documentations. Current instructions are for Linux (Debian 9.1). We expect to provide Windows and OS X instructions in late 2017/early 2018.
+ * Files that start MBatch_02 are additional details about the test files in the package.
+ * Files that start MBatch_03 are detail the file formats used by MBatch and the associated "Standardized Data" files.
+ * Files that start MBatch_04 are documentation of assessment algorithms/plots.
+ * Files that start MBatch_05 are documentation of correction algorithms.
+
+Downloads and details on Standardized Data are available at http://bioinformatics.mdanderson.org/TCGA/databrowser/
+
+If you have the equivalent of Java 8 and R 3.4+ installed on your machine, and are familiar with your OS prerequisites and R package installation, the following quickstart instructions may allow quick installation.
+
+```R
+# required CRAN packages
+install.packages(c("rJava", "devtools", "Cairo", "epiR", "gtools", "mclust", "squash", "httr"), dependencies=TRUE, repos = "http://cloud.r-project.org/")
+
+# required GitHub package
+library(devtools)
+install_github("js229/Vennerable")
+
+# required Bioconductor packages
+source("http://bioconductor.org/biocLite.R")
+biocLite(c("limma","RBGL","graph","Biobase"), ask="a")
+install.packages(c("oompaBase", "ClassDiscovery", "PreProcess"), dependencies=TRUE, repos=c("http://cloud.r-project.org", "http://silicovore.com/OOMPA/"))
+
+# MBatch package
+devtools::install_github("MD-Anderson-Bioinformatics/MBatch/package")
+```

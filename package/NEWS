@@ -4,7 +4,14 @@
 	*	       1.4 SERIES NEWS			 *
 	*						 *
 	**************************************************
+2018-06-22-1444
 
+		CHANGES IN R VERSION 1.4.17
+
+NEW FEATURES
+
+    o	Restored generation of histograms for boxplot
+    o	Significant update of docs and vignettes
 
 		CHANGES IN R VERSION 1.4.16
 
