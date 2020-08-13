@@ -1,3 +1,5 @@
+Superseded by https://github.com/MD-Anderson-Bioinformatics/BatchEffectsPackage
+
 # MBatch R Package
 
 This is for educational and research purposes only. 
